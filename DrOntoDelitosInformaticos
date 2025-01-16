@@ -1,0 +1,2460 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.delitosinformaticos.org/ontologia#"
+     xml:base="http://www.delitosinformaticos.org/ontologia"
+     xmlns:g="http://www.delitosinformaticos.org/ontologia/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:di="http://www.delitosinformaticos.org/ontologia#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla-sd="http://ontologydesignpatterns.org/opla-sd#"
+     xmlns:data-view="http://www.w3.org/2003/g/data-view#">
+    <owl:Ontology rdf:about="http://www.delitosinformaticos.org/ontologia">
+        <owl:imports rdf:resource="http://www.w3.org/2002/07/owl#"/>
+        <rdfs:comment>Ontologia Desenvolvida pelo discente Julio Cesar para a disciplina de Modelagem Conceitual e Raciocínio Automático ministrada pelo professor Cleyton Rodrigues - Universidade de Pernambuco / Programa de Pós-graduação em Engenharia da Computação - PPGEC
+
+Objetivo:
+A Ontologia foi criada com o objetivo de servir como fonte de conhecimento entre os delitos informáticos relacionados à Engenhosidade Social, mais especificamente aos ataques de Phishing, e as normas legais penais para caso de ataques com a técnica citada.
+A ideia é que a Ontologia possa ser consultada e retornar o artigo do código penal que possa tipificar o ataque realizado.</rdfs:comment>
+        <rdfs:comment>Ontologia de Delitos Informáticos</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla-sd#entityPosition -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla-sd#entityPosition"/>
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla-sd#entityPositionX -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla-sd#entityPositionX"/>
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla-sd#entityPositionY -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla-sd#entityPositionY"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#envolve -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#envolve"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#exploraVulnerabilidade -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#exploraVulnerabilidade"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#regulamentadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#regulamentadoPor"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temLegislação -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temLegislação">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#FraudeEletronica"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#usa -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#usa">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#usaTecnica -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#usaTecnica">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#InvasaoPrivacidade"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#CyberStalking"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Spyware"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#éClassificadoComo -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#éClassificadoComo">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#DelitoInformatico"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Impuro"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Puro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#éExploradaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#éExploradaPor">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Humana"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#éInvestigadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#éInvestigadoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Polícia_Civil"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Polícia_Federal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#éJulgadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#éJulgadoPor">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Regionais_Federais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#éPrevenidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#éPrevenidoPor"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#éTipificadoComo -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#éTipificadoComo">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#FraudeEletronica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#éTipificadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#éTipificadoPor">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#WebsitePhishing"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Art_171_Paragrafo_2A"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Art_171_Paragrafo_2B"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#éVariacaoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.delitosinformaticos.org/ontologia#éVariacaoDe">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#EvilTwin"/>
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Man-in-the-Middle"/>
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Pharming"/>
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#SearchEnginePhishing"/>
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Smishing"/>
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#SpearPhishing"/>
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Tabnabbing"/>
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Vishing"/>
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Whaling"/>
+        <rdfs:range rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#intersectionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#intersectionOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temDataHoraFimAtaque -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temDataHoraFimAtaque"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temDataHoraInicioAtaque -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temDataHoraInicioAtaque"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temDescricaoAppAfetado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temDescricaoAppAfetado"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temGeolocalizacaoLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temGeolocalizacaoLatitude"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temGeolocalizacaoLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temGeolocalizacaoLongitude"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temIdUsuario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temIdUsuario"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temIpProvedorServicoVitima -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temIpProvedorServicoVitima"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temNomeAppAfetado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temNomeAppAfetado"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temNumeroImei -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temNumeroImei">
+        <rdfs:comment>O IMEI, International Mobile Equipment Identity ou Identificação Internacional de Equipamento Móvel, em português, é um número composto normalmente por 15 dígitos - são únicos e globais -, que permitem a identificação do seu celular. É como um documento de identidade para seu dispositivo móvel.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temNumeroTelefoneAtacante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temNumeroTelefoneAtacante"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temNumeroTelefoneVitima -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temNumeroTelefoneVitima"/>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temTecnicaAtaque -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temTecnicaAtaque">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#temUrlMaliciosa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.delitosinformaticos.org/ontologia#temUrlMaliciosa">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#WebsitePhishing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">89.35998478246951</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">286.59017339499</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Adware -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Adware">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.73663524930446</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">103.29133869234255</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#AgenteAtaque -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#AgenteAtaque">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">166.03383410440722</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">63.95770171124612</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#AgenteMalicioso -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#AgenteMalicioso">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#AgenteAtaque"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">167.6445656767304</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">129.9548285999777</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#AgentePhishing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#AgentePhishing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#AgenteAtaque"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">228.64660783597836</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">293.75889426921134</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art171Paragrafo2B -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art171Paragrafo2B">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Organizacoes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_138_Crimes_Contra_a_Honra -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_138_Crimes_Contra_a_Honra">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_139_Crimes_Contra_a_Honra -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_139_Crimes_Contra_a_Honra">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_140_Crimes_Contra_a_Honra -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_140_Crimes_Contra_a_Honra">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_147_Crimes_de_Ameaca -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_147_Crimes_de_Ameaca">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_154A_Invasao_de_Dispositivo_Informatico -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_154A_Invasao_de_Dispositivo_Informatico">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_155_Furto -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_155_Furto">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_158_Extorsao -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_158_Extorsao">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_160_Extorsao_Indireta -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_160_Extorsao_Indireta">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_168_Extorsao_Indebita -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_168_Extorsao_Indebita">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_171_Estelionato -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_171_Estelionato">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_171_Paragrafo_2A -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_171_Paragrafo_2A">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">150.95594041757738</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">120.07284021265356</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_171_Paragrafo_2B -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_171_Paragrafo_2B">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_184_Violacao_de_direito_autoral -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_184_Violacao_de_direito_autoral">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_208_Escarnio_por_motivo_de_religiao -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_208_Escarnio_por_motivo_de_religiao">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_228_Favorecimento_da_Prostituicao -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_228_Favorecimento_da_Prostituicao">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_233_Ato_obsceno -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_233_Ato_obsceno">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_234_escrito_ou_ato_obsceno -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_234_escrito_ou_ato_obsceno">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_286_Incitacao_ao_crime -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_286_Incitacao_ao_crime">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art_287_apologia_de_crime_ou_criminoso -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art_287_apologia_de_crime_ou_criminoso">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Del2848_1940"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#AutenticacaoMultifator -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#AutenticacaoMultifator">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#MedidaDefesa"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">22.928642616571626</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">294.88980047181076</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Backdoors -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Backdoors">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">32.35891767995486</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">238.46940236030454</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Baiting -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Baiting">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.041361276809745</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">119.43890791848715</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Botnet -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Botnet">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">135.04246136922407</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">21.294698636505522</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Broken_Authentication -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Broken_Authentication">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.97550757388439</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">158.9116386118625</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Comunicacao -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Comunicacao">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27.7930500890937</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">64.74807254478765</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Configuração_Inadequada -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Configuração_Inadequada">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueRede"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">101.24554994334689</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">250.19579869543404</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Conscientizacao -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Conscientizacao">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#PrevencaoProtecao"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">235.4743975511046</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">60.75762212455188</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Educação e Conscientização dos cidadãos</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#ConsequenciaAtaque -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#ConsequenciaAtaque">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">28.462649029657697</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">292.3943836902875</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Cross_Site_Request_Forgery_CSRF -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Cross_Site_Request_Forgery_CSRF">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">102.80994315285358</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">32.808174139041945</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Cross_Site_Scripting_XSS -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Cross_Site_Scripting_XSS">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.585217013243645</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">182.63547913033236</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#CyberStalking -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#CyberStalking">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueRede"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.8800162405580503</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">294.97992943572996</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Ataques de Rede: Se o CyberStalking envolve monitoramento, interceptação ou manipulação de comunicações online da vítima, ele pode ser classificado como um ataque de rede. Isso inclui atividades como espionagem de tráfego de rede, acesso não autorizado a emails ou contas de mídia social.
+
+Ataques a Aplicações Web: Se o CyberStalking ocorre principalmente através de plataformas online, como redes sociais, fóruns ou email, ele pode ser considerado um ataque a aplicações web. Isso se refere a casos em que os agressores usam essas plataformas para perseguir, assediar ou intimidar suas vítimas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Del2848_1940 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Del2848_1940">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Nacional"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">289.01193328282665</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">62.158606297840414</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Código Penal
+DECRETO-LEI No 2.848, DE 7 DE DEZEMBRO DE 1940</rdfs:comment>
+        <rdfs:label>Del2848_1940</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#DelitoInformatico -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#DelitoInformatico">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">166.00810807271992</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">150.17263208966395</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Delito informático é a conduta típica, antijurídica e cumpável cometida através de recursos informáticos contra vens jurídicos comuns e/ou cometida em face de bem jurídico informático, atingindo ou buscando atingir a esfera da segurança informática em seus elementos confidencialidade, integrirdade e dsponibilidade.
+Fonte: 
+SYSDOW, S. T. Curso de Direito Penal Informático. 2ª edição. ed. [S.l.]: Brasil:
+JusPodivm, 2021. 268 p</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#EmailPhishing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#EmailPhishing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">219.3119625407565</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">33.050190499421504</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#EvilTwin -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#EvilTwin">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueRede"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">102.33163614694939</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">72.9168897385079</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Firewall -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Firewall">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#MedidasTecnologicas"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">91.68369402036866</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">151.1207369992343</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#FormaCometimentoDelito -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#FormaCometimentoDelito">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">96.28975871446873</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">129.403567157798</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#FraudeEletronica -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#FraudeEletronica">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#DelitoInformatico"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">102.74369303964308</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">135.20228646893327</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Humana -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Humana">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Vulnerabilidade"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">51.35069472800552</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.408100288274635</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Impersonation -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Impersonation">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">191.6341486399814</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">17.108044341993317</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Improprio -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Improprio">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#FormaCometimentoDelito"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">260.07481675996485</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">14.40260792354767</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Impuro -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Impuro">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Proprio"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">248.34104066000947</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">88.80916458260315</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Impuros (ou indiretos)
+É aquele que visa atingir bem jurídico diverso do informático como a honra, o patrimônio ou a diagnidade sexual.
+Fonte: 
+SYSDOW, S. T. Curso de Direito Penal Informático. 2ª edição. ed. [S.l.]: Brasil:
+JusPodivm, 2021. 269-273 p</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Insecure_Deserialization -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Insecure_Deserialization">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">120.9447006962683</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">148.50604253211193</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Internacionais -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Internacionais">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Organizacoes"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">218.08659198838126</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">86.99158515035103</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Internacional -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Internacional">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Legislacao"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">115.65526646092603</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">209.19034513939647</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#InvasaoPrivacidade -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#InvasaoPrivacidade">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#DelitoInformatico"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.839141356856851</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">140.18397369122252</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Investigacao -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Investigacao">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">195.1625403825374</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">124.84940705943292</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFAL -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFAL">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF5"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">224.53152326056272</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">21.95468953047408</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFCE -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFCE">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF5"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">21.546230104993562</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">266.87154817642795</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFES -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFES">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF2"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">68.72697205651343</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">283.3180688621143</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFMG -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFMG">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF6"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFMS -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFMS">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF3"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">63.4162389051194</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">210.30684401538616</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFPB -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFPB">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF5"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">35.67373190507144</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">113.67915711759906</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFPE -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFPE">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF5"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">143.68090966062707</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">175.35073714495277</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFRJ -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFRJ">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF2"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">148.6452403904409</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.94724685729446</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFRN -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFRN">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF5"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">73.54140446059924</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">124.25561120940348</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFSC -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFSC">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF4"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">141.43816656882913</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">53.49432447151957</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFSE -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFSE">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF5"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">94.2997264250364</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">197.9114670388647</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#JFSP -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#JFSP">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TRF3"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">49.16010631229921</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">270.5456493574</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Keylogger -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Keylogger">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.179670213273583</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">232.36039099189222</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#L12737_2012 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#L12737_2012">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Nacional"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">149.1001482327758</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">180.4341375164976</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#L12965_2014 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#L12965_2014">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Nacional"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">123.67874458495957</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">209.8951669349572</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Marco Civil da Internet
+LEI Nº 12.965, DE 23 DE ABRIL DE 2014
+Estabelece princípios, garantias, direitos e deveres para o uso da Internet no Brasil.</rdfs:comment>
+        <rdfs:label>L12965_2014</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#L13709_2018_LGPD -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#L13709_2018_LGPD">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Nacional"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">231.9872744176209</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.687609279974286</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#L14155_2021 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#L14155_2021">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Nacional"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">217.0472133420372</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">214.047864989479</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Legislacao -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Legislacao">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">77.09463766261896</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">223.66227924188547</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Man-in-the-Middle -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Man-in-the-Middle">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueRede"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">121.05054698683888</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">278.5353740848154</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#MedidaDefesa -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#MedidaDefesa">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">175.1353735204196</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">278.6405925778979</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#MedidasTecnologicas -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#MedidasTecnologicas">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#PrevencaoProtecao"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.998872760260976</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">46.93627972242549</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#MensagemEmail -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#MensagemEmail">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Comunicacao"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.263916451020089</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">160.80364596776937</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#MensagemMaliciosa -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#MensagemMaliciosa">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Comunicacao"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">186.83405885161994</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">151.66387670776214</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Nacionais -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Nacionais">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Organizacoes"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">221.12653680359048</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">235.16464688304552</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Nacional -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Nacional">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Legislacao"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">140.30201213401173</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">271.3222289979462</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Organizacoes -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Organizacoes">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">245.8499233753364</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">256.5984607656279</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Pharming -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Pharming">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">88.54043291525352</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">271.40051579004444</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Phishing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Phishing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">34.00342136836789</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">221.13667727402117</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#PiratariaSoftware -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#PiratariaSoftware">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#PropriedadeIntelectual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Polícia_Civil -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Polícia_Civil">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Nacionais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">36.75583680557655</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">285.27514275938813</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Polícia_Federal -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Polícia_Federal">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Nacionais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">246.45299458355726</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">119.85697606294612</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Pretexting -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Pretexting">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">79.35564318360557</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">190.7858027980637</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#PrevencaoProtecao -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#PrevencaoProtecao">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">168.09778526535865</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.78404756296362</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#PropriedadeIntelectual -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#PropriedadeIntelectual">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#DelitoInformatico"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">231.5925983251518</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">293.0116692114414</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Proprio -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Proprio">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#FormaCometimentoDelito"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">107.01674597678723</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">154.12353286979385</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Exige necessariamente e obrigatoriamente o uso de um meio informático para seu comentimento.
+Fonte: 
+SYSDOW, S. T. Curso de Direito Penal Informático. 2ª edição. ed. [S.l.]: Brasil:
+JusPodivm, 2021. 269-273 p</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Protocolos_Não_Seguros -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Protocolos_Não_Seguros">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueRede"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">240.49633319605934</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">104.46776997988363</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Puro -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Puro">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Proprio"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">59.47125052222408</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">127.08015600700995</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Puros (ou diretos)
+É aquele em que o objetivo da conduta e do agente é o de atingir necessariamente o bem jurídico informático, ou seja, a segurança.
+Fonte: 
+SYSDOW, S. T. Curso de Direito Penal Informático. 2ª edição. ed. [S.l.]: Brasil:
+JusPodivm, 2021. 269-273 p</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Quid_Pro_Quo -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Quid_Pro_Quo">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">197.12973251974998</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">57.43729442289539</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Ransomware -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Ransomware">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">75.7319425722665</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">164.21877481914217</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Rede -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Rede">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Vulnerabilidade"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">236.95561540064867</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">272.3885283512027</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>DoS (Denial of Service): Sobrecarrega um sistema para torná-lo inacessível.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Rootkit -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Rootkit">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">216.7100854024264</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">157.7161476538267</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#SQL_Injection -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#SQL_Injection">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">168.93481719208978</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">164.3409655301121</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#SearchEnginePhishing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#SearchEnginePhishing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">63.45885938839677</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">219.62183378680098</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Security_Misconfiguration -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Security_Misconfiguration">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">169.0198857401294</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">225.8120058546494</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Sensitive_Data_Exposure -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Sensitive_Data_Exposure">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">119.9630433304354</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.29537827448829</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#SistemaAntiPhishing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#SistemaAntiPhishing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#MedidaDefesa"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.81553611152995</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">113.6798348211843</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Smishing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Smishing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">180.22197708485555</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">245.50763664482952</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>O uso de mensagens de texto (SMS) para realizar ataques de phishing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Sniffing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Sniffing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueRede"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">46.02277438566612</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">193.8568214676756</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Software -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Software">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Vulnerabilidade"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">251.32361280486703</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">122.07101401603062</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#SpearPhishing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#SpearPhishing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">192.87986825136701</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">252.27026427145654</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Spoofing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Spoofing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueRede"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">232.32725488668916</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">146.64397527270063</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Spyware -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Spyware">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">139.18374611760024</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.305245695350203</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TJAL -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TJAL">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">294.95058348513606</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">123.14621500692061</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TJBA -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TJBA">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">91.77964659444744</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">268.40330679762866</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TJCE -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TJCE">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">195.90140883221633</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">165.66213050732017</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TJMA -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TJMA">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">223.10663006145765</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">164.04094255968218</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TJPB -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TJPB">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TJPE -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TJPE">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">142.22702357631343</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.37780774115939</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TJPI -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TJPI">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">101.62732836981334</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">253.01559823977883</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TJRN -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TJRN">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">205.97676057347033</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.452846900277704</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TJSE -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TJSE">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">73.49848797540612</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.101967008709474</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TRF1 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TRF1">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Regionais_Federais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">280.439673395887</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">105.05134865614676</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TRF2 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TRF2">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Regionais_Federais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">62.76337462331308</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">29.529117248096934</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TRF3 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TRF3">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Regionais_Federais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">276.77981837295306</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">271.0959669051651</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TRF4 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TRF4">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Regionais_Federais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">292.7701468662879</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">128.22460613743556</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TRF5 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TRF5">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Regionais_Federais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">96.66685413223584</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">147.0683511189212</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TRF6 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TRF6">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Tribunais_Regionais_Federais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Tabnabbing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Tabnabbing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">231.22296041892284</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">155.01021036615913</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Tailgating -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Tailgating">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">38.50068533456134</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">247.12506505709084</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TecnicaAtaque -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TecnicaAtaque">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">82.51352309592541</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">298.1371516551859</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaque"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaque"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">86.07560347116309</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">212.92137999252185</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueRede -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueRede">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaque"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">183.83856175520472</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">111.90591399591499</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaque"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">91.50596901554209</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.415494389295029</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Tribunais_Estaduais">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Nacionais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">231.07443497389684</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">219.07694000397012</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Tribunais_Regionais_Federais -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Tribunais_Regionais_Federais">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Nacionais"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">209.37106976119657</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">239.41819733357602</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Trojan_Horse -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Trojan_Horse">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">174.83843529811625</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">285.51695675072585</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Using_Components_with_Known_Vulnerabilities -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Using_Components_with_Known_Vulnerabilities">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">288.5033155816721</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">174.72742914993847</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#ViolacaoDados -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#ViolacaoDados">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#ConsequenciaAtaque"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">68.11522966014184</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">175.7025079206731</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#ViolacaoDireitosAutorais -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#ViolacaoDireitosAutorais">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#PropriedadeIntelectual"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">228.05391344444394</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.9690864150752345</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Vishing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Vishing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">51.81986806189818</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">152.37251258443925</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Vulnerabilidade -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Vulnerabilidade">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">207.49778450825778</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">36.24574733920377</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Vírus -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Vírus">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">265.56769039664664</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">172.28368234957392</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#WebsitePhishing -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#WebsitePhishing">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#Phishing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.delitosinformaticos.org/ontologia#éTipificadoPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.delitosinformaticos.org/ontologia#Art_171_Paragrafo_2A"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.delitosinformaticos.org/ontologia#éTipificadoPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.delitosinformaticos.org/ontologia#Art_171_Paragrafo_2B"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">170.15546920088497</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">290.242589906182</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Whaling -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Whaling">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueEngenhosidadeSocial"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">287.10634590155047</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">289.85940616881066</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Worm -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Worm">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueSoftwareMalicioso"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">249.57037802401942</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">210.50159165661745</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#XML_External_Entities_XXE -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#XML_External_Entities_XXE">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">131.3993737210929</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">135.6895495274424</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art13§2 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art13§2">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#L12965_2014"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">146.78249371014724</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">35.462137901155245</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Art. 13. Na provisão de conexão à internet, cabe ao administrador de sistema autônomo respectivo o dever de manter os registros de conexão, sob sigilo, em ambiente controlado e de segurança, pelo prazo de 1 (um) ano, nos termos do regulamento.
+§ 2º A autoridade policial ou administrativa ou o Ministério Público poderá requerer cautelarmente que os registros de conexão sejam guardados por prazo superior ao previsto no caput</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Art15§2 -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Art15§2">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#L12965_2014"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">159.88900792070447</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">211.99213707615627</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment>Art. 15. O provedor de aplicações de internet constituído na forma de pessoa jurídica e que exerça essa atividade de forma organizada, profissionalmente e com fins econômicos deverá manter os respectivos registros de acesso a aplicações de internet, sob sigilo, em ambiente controlado e de segurança, pelo prazo de 6 (seis) meses, nos termos do regulamento.
+§ 2º A autoridade policial ou administrativa ou o Ministério Público poderão requerer cautelarmente a qualquer provedor de aplicações de internet que os registros de acesso a aplicações de internet sejam guardados, inclusive por prazo superior ao previsto no caput, observado o disposto nos §§ 3º e 4º do art. 13.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#Insufficient_Logging_&amp;_Monitoring -->
+
+    <owl:Class rdf:about="http://www.delitosinformaticos.org/ontologia#Insufficient_Logging_&amp;_Monitoring">
+        <rdfs:subClassOf rdf:resource="http://www.delitosinformaticos.org/ontologia#TecnicaAtaqueAplicacaoWeb"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">67.847206736621</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">300.6986963248585</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#art_171_paragrafo_2A -->
+
+    <owl:NamedIndividual rdf:about="http://www.delitosinformaticos.org/ontologia#art_171_paragrafo_2A">
+        <rdf:type rdf:resource="http://www.delitosinformaticos.org/ontologia#Art_171_Paragrafo_2A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#websitephishing1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.delitosinformaticos.org/ontologia#websitephishing1">
+        <rdf:type rdf:resource="http://www.delitosinformaticos.org/ontologia#WebsitePhishing"/>
+        <éTipificadoPor rdf:resource="http://www.delitosinformaticos.org/ontologia#art_171_paragrafo_2A"/>
+        <temUrlMaliciosa>http://www.teste.com.br</temUrlMaliciosa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.delitosinformaticos.org/ontologia#websitephishing2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.delitosinformaticos.org/ontologia#websitephishing2">
+        <rdf:type rdf:resource="http://www.delitosinformaticos.org/ontologia#WebsitePhishing"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:intersectionOf>
+            <rdf:Description/>
+        </owl:intersectionOf>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.delitosinformaticos.org/ontologia#temTecnicaAtaque"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Adware"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Backdoors"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Botnet"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Keylogger"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Ransomware"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Rootkit"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Spyware"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Trojan_Horse"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Vírus"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Worm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Broken_Authentication"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Cross_Site_Request_Forgery_CSRF"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Cross_Site_Scripting_XSS"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Insecure_Deserialization"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#SQL_Injection"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Security_Misconfiguration"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Sensitive_Data_Exposure"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Using_Components_with_Known_Vulnerabilities"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#XML_External_Entities_XXE"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Insufficient_Logging_&amp;_Monitoring"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Configuração_Inadequada"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#CyberStalking"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#EvilTwin"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Man-in-the-Middle"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Protocolos_Não_Seguros"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Sniffing"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Spoofing"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Configuração_Inadequada"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#EvilTwin"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Man-in-the-Middle"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Protocolos_Não_Seguros"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Sniffing"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#Spoofing"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#L12737_2012"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#L13709_2018_LGPD"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#L14155_2021"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#TRF1"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#TRF2"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#TRF3"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#TRF4"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#TRF5"/>
+            <rdf:Description rdf:about="http://www.delitosinformaticos.org/ontologia#TRF6"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
